@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7055655423872584253}
   - component: {fileID: 1409150791197330625}
   - component: {fileID: 923318743882874884}
+  - component: {fileID: 5566370355915064260}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -185,3 +186,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorAnimationInterval: 0.1
+--- !u!114 &5566370355915064260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883202752830066480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a31002580b183b4a91e33c6abc68a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootInterval: 1
+  bulletSpeed: 3
+  bulletPrefab: {fileID: 6537081096306668864, guid: 37f2452c41fb45444bc15cc7c13f8839, type: 3}
