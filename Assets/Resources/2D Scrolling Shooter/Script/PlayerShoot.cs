@@ -21,6 +21,10 @@ public class PlayerShoot : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance.IsGameStarted == false)
+        {
+            return;
+        }
 
     }
 

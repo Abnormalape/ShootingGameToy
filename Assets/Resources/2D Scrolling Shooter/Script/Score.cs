@@ -7,15 +7,21 @@ using UnityEngine;
 [System.Serializable]
 public class Score
 {
-    //[SerializeField] 
-    private int score = 0;
-    [SerializeField] private int bestScore = 0;
+    [SerializeField] public int score = 0;
+    [SerializeField] public int bestScore = 0;
 
     private TMPro.TextMeshProUGUI scoreText;
     private TMPro.TextMeshProUGUI bestScoreText;
     public void Initialize()
     {
         bestScore = PlayerPrefs.GetInt("BestScore");
+
+
+        string jsonstring = File.ReadAllText("Assets/Score.txt");
+
+        bestScore = JsonUtility.FromJson<Score>(jsonstring).bestScore;
+
+
         if (scoreText != null)
         {
             scoreText.text = $"score : {score}";
@@ -61,4 +67,12 @@ public class Score
             }
         }
     }
+    public void Save()
+    {
+        string jsonstring = JsonUtility.ToJson(this);
+
+        File.WriteAllText("Assets/Score.txt", jsonstring);
+    }
+
+    
 }

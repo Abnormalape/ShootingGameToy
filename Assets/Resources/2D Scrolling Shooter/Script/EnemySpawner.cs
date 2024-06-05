@@ -20,10 +20,15 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private EnemySpawnInfo[] spawnInfo;
 
+    public void OnGameStarted()
+    {
+        Invoke("Spawn", spawnInfo[currentIndex].SpawnTime);
+    }
+
     private int currentIndex = 0;
     private void Awake()
     {
-        Invoke("Spawn", spawnInfo[currentIndex].SpawnTime);
+        
     }
     private void Spawn()
     {

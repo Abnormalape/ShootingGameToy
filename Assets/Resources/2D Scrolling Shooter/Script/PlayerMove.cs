@@ -54,6 +54,11 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.IsGameStarted == false)
+        {
+            return;
+        }
+
         // 마우스 클릭을 시작할 때 마우스 클릭 위치와 플레이어의 위치를 오프셋으로 계산.
         if (Input.GetMouseButtonDown(0))
         {

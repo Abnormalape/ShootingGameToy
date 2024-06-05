@@ -44,4 +44,9 @@ class ScoreManager : MonoBehaviour
         score.Initialize();    
     }
 
+    public void SaveScore()
+    {
+        score.Save();
+    }
+
 }
